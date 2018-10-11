@@ -1,0 +1,49 @@
+#/gate/actor/addActor SimulationStatisticActor stat
+#/gate/actor/stat/save ../output/test.txt
+#/gate/actor/stat/saveEveryNEvents 100
+#/gate/actor/stat/attachTo  world
+
+/gate/output/root/enable
+/gate/output/root/setFileName ../output/tocongress{i}
+/gate/output/root/setRootHitFlag            1
+/gate/output/root/setRootSinglesFlag        1
+/gate/output/root/setRootNtupleFlag         1
+
+# Fenetre 364 keV -> 10%
+/gate/digitizer/name 364keV
+/gate/digitizer/insert singleChain
+/gate/digitizer/364keV/setInputName Singles
+/gate/digitizer/364keV/insert thresholder
+/gate/digitizer/364keV/thresholder/setThreshold 336.7 keV
+/gate/digitizer/364keV/insert upholder
+/gate/digitizer/364keV/upholder/setUphold 391.299 keV
+
+# Fenetre 300 keV -> 20%
+/gate/digitizer/name 300keV
+/gate/digitizer/insert singleChain
+/gate/digitizer/300keV/setInputName Singles
+/gate/digitizer/300keV/insert thresholder
+/gate/digitizer/300keV/thresholder/setThreshold 282. keV
+/gate/digitizer/300keV/insert upholder
+/gate/digitizer/300keV/upholder/setUphold 336.7 keV
+
+ #Fenetre 400keV -> 20%
+/gate/digitizer/name 400keV
+/gate/digitizer/insert singleChain
+/gate/digitizer/400keV/setInputName Singles
+/gate/digitizer/400keV/insert thresholder
+/gate/digitizer/400keV/thresholder/setThreshold 391.2999 keV
+/gate/digitizer/400keV/insert upholder
+/gate/digitizer/400keV/upholder/setUphold 445.8999 keV
+
+
+
+
+#/gate/actor/addActor FixedForcedDetectionActor hfda
+#/gate/actor/hfda/attachTo                     world
+#/gate/actor/hfda/setSourceType                isotropic
+#/gate/actor/hfda/setDetector                  crystal
+#/gate/actor/hfda/setDetectorResolution        256 256
+#/gate/actor/hfda/connectARF 	true
+
+

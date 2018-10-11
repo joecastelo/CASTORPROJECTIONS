@@ -1,0 +1,845 @@
+castor-recon() -> Launch reconstruction from CASToR version 2.0.1.
+==================================================================================================
+                                      COMMAND LINE CONTEXT
+==================================================================================================
+Command line: castor-recon -oit -1 -it 10:16 -dim 64,64,64 -vox 9.59,9.59,9.59 -opti MLEM -proj joseph -fov-out 98 -fout reconstruidocastor -df Pythongenerated.Cdh -vb 2 
+Working directory: /home/joaohenrique/gate/castorprojgate/output
+Data of execution: Mon Oct  8 16:04:16 2018
+Float numbers precision in bytes (for matrices and some computations): 4
+Float numbers precision in bytes (for sensitive computations that require at least double precision): 8
+Float numbers precision in bytes (for datafile reading/writing): 4
+Float numbers precision in bytes (for scanner LUT reading/writing): 4
+CASToR version: 2.0.1
+==================================================================================================
+sScannerManager::BuildScannerObject() -> Start building
+sScannerManager::InstantiateScanner() -> Instantiate the scanner geometry structure
+iScannerSPECTConv::Instantiate() -> Create scanner structure and read parameters from configuration file
+sScannerManager::GetGeometricInfoFromDataFile() -> Look for acquisition specific settings into datafile header
+sScannerManager::BuildLUT() -> Generate the geometric Look-Up Table
+iScannerSPECTConv::BuildLUT -> Build LUT for scanner elements coordinates and orientations
+sScannerManager::Initialize() -> From scanner symbiat2he
+iScannerSPECTConv::Initialize() -> Initialize remaining stuff for scanner to be ready
+oImageDimensionsAndQuantification::Initialize() -> Initialize image dimensions, basis functions and quantification
+  --> Image dimensions: [64;64;64] voxels of [9.59;9.59;9.59] mm3
+  --> FOV size: [613.76;613.76;613.76] mm3
+oDynamicDataManager::SetDynamicSpecificQuantificationFactors() ... 
+oImageDimensionsAndQuantification::SetAcquisitionTime() -> Static single bed acquisition with duration [ 0 : 4160 ] seconds
+  --> Correct for frame duration
+oImageDimensionsAndQuantification::SetCalibrationFactor() -> Correct for following calibration factor: 1
+vDataFile::InitializeMappedFile() -> Map datafile to memory
+iDataFileSPECT::PrepareDataFile() -> Build histogram events
+oProjectorManager::Initialize() -> Initialize projectors and projection lines
+iProjectorJoseph::InitializeSpecific() -> Use Joseph projector
+oOptimizerManager::Initialize() -> Initialize optimizer and penalty
+iOptimizerMLEM::InitializeSpecific() -> Use the MLEM optimizer
+oDynamicModelManager::CheckParameters() ...
+oIterativeAlgorithm::SetOutputIterations ...
+oIterativeAlgorithm::Iterate ...
+oIterativeAlgorithm::IterateCPU() -> Start algorithm for 10 iterations
+oIterativeAlgorithm::StepBeforeIterationLoop ... 
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.057669 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 1 sec | CPU: 0.056537 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.055451 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.054466 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.051581 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.049183 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 0 sec | CPU: 0.046524 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.043808 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.043456 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.048113 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.0493 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.051002 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.053021 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.056132 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.056897 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 1/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.057409 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.057016 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.057341 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.055358 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.054147 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 1 sec | CPU: 0.052797 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.049968 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 0 sec | CPU: 0.04775 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.045521 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.044352 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.047379 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.050724 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.054441 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.056504 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.059637 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.06124 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 2/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.06178 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.063503 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.062832 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.061758 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.060521 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.057921 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.054864 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 1 sec | CPU: 0.053121 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.050751 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.049877 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.054158 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.057968 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.062347 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.065405 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.067662 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.070891 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 3/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.072054 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.073148 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.073515 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.072325 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.06965 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.068491 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.064646 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 1 sec | CPU: 0.061979 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.057169 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.056624 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.0612 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.062959 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.067602 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.070498 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.07153 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.073965 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 4/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.074464 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.075353 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.073055 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.071641 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.068972 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.065529 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 1 sec | CPU: 0.062329 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 0 sec | CPU: 0.058017 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.053634 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.05383 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.05607 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.058841 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.0627 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.064503 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.066731 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.068238 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 5/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.069634 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.069558 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.068078 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.067883 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.064223 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 1 sec | CPU: 0.063091 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.05836 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 0 sec | CPU: 0.05588 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.051178 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.054587 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.054167 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.057187 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.061777 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.065739 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.069239 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.069698 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 6/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.06868 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.069625 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.067965 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.066397 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.063886 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 1 sec | CPU: 0.060529 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.057529 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 0 sec | CPU: 0.05423 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.050503 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.049733 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.053378 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.056362 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.059575 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.062845 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.065498 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.067126 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 7/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.067517 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.068459 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.066811 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.068327 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.063431 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.05982 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 1 sec | CPU: 0.0564 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 0 sec | CPU: 0.053477 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.050191 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.049253 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.052205 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.056309 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.060069 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.063126 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.06659 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.069685 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 8/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.068966 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.067678 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.066023 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.064854 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.062026 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.059664 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.055605 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 1 sec | CPU: 0.052907 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.050058 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.049005 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.052382 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.055474 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.059308 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.061409 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.064481 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.065508 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 9/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.067345 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 1/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 1 | User: 0 sec | CPU: 0.06625 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 2/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 2 | User: 0 sec | CPU: 0.065721 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 3/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 3 | User: 0 sec | CPU: 0.063763 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 4/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 4 | User: 0 sec | CPU: 0.06234 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 5/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 5 | User: 0 sec | CPU: 0.058396 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 6/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 6 | User: 0 sec | CPU: 0.055946 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 7/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 7 | User: 1 sec | CPU: 0.053108 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 8/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 8 | User: 0 sec | CPU: 0.048793 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 9/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 9 | User: 0 sec | CPU: 0.04858 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 10/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 10 | User: 0 sec | CPU: 0.052319 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 11/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 11 | User: 0 sec | CPU: 0.056077 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 12/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 12 | User: 0 sec | CPU: 0.059282 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 13/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 13 | User: 0 sec | CPU: 0.061914 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 14/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 14 | User: 0 sec | CPU: 0.06358 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 15/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 15 | User: 0 sec | CPU: 0.066088 sec
+oIterativeAlgorithm::IterateCPU() -> Start iteration 10/10 subset 16/16
+oIterativeAlgorithm::StepInnerLoopInsideSubsetLoop() -> Start loop over events
+oOptimizerManager::ImageUpdateStep() -> Proceed to image update
+vOptimizer::ImageUpdateStep() -> Start image update
+oIterativeAlgorithm::IterateCPU() -> Time spent for subset 16 | User: 0 sec | CPU: 0.066829 sec
+oIterativeAlgorithm::StepAfterSubsetLoop() -> Save image at iteration 10
+oImageSpace::ApplyOutputFOVMasking() -> Mask output image
+  --> Mask transaxial FOV outside 98 %
+oIterativeAlgorithm::StepAfterIterationLoop ... 
+oIterativeAlgorithm::IterateCPU() -> Total time spent | User: 10 sec | CPU: 9.62179 sec
+

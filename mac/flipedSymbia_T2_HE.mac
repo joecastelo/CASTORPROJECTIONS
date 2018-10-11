@@ -1,0 +1,129 @@
+############# SYMBIA T2 HE Collimator##############
+#SCANNER HEAD 
+#--------------------------------------------------------------
+# Thickness : 180.0 mm, Width : 524.4 mm, Length: 670.4 mm 
+#--------------------------------------------------------------
+/gate/world/daughters/name SPECThead 
+/gate/world/daughters/insert box 
+/gate/SPECThead/geometry/setXLength 180.0 mm 
+/gate/SPECThead/geometry/setZLength 524.4 mm 
+/gate/SPECThead/geometry/setYLength 670.4 mm 
+/gate/SPECThead/placement/setTranslation -23.45 0. 0. cm 
+/gate/SPECThead/setMaterial Air 
+/gate/SPECThead/attachPhantomSD 
+/gate/SPECThead/vis/forceWireframe
+/gate/SPECThead/repeaters/insert ring
+/gate/SPECThead/ring/setRepeatNumber 2
+
+
+#### 32 proj * 65 s / proj = 2080s -> 180 deg / 2080 s ~ 0.0865 deg/s
+/gate/SPECThead/moves/insert orbiting
+/gate/SPECThead/orbiting/setSpeed 0.0865 deg/s 
+/gate/SPECThead/orbiting/setPoint1 0. 0. 0. cm
+/gate/SPECThead/orbiting/setPoint2 0. 0. 1. cm 
+
+#SHIELDING
+#--------------------------------------------------------------
+# Thickness : 178.7 mm, Width : 470.4 mm, Length: 616.4 mm 
+#--------------------------------------------------------------
+/gate/SPECThead/daughters/name shielding 
+/gate/SPECThead/daughters/insert box 
+/gate/shielding/geometry/setXLength 178.7 mm 
+/gate/shielding/geometry/setZLength 470.4 mm 
+/gate/shielding/geometry/setYLength 616.4 mm 
+/gate/shielding/placement/setTranslation 13.5 0. 0. mm 
+/gate/shielding/setMaterial Lead 
+/gate/shielding/attachPhantomSD 
+/gate/shielding/vis/forceSolid 
+#/gate/shielding/vis/forceWireframe
+/gate/shielding/vis/setColor red 
+
+#COLLIMATOR
+#--------------------------------------------------------------
+# Thickness : 59.7 mm, Width : 440.0 mm, Length: 572.0 mm 
+#--------------------------------------------------------------
+/gate/shielding/daughters/name collimator 
+/gate/shielding/daughters/insert box 
+/gate/collimator/geometry/setXLength 59.7 mm 
+/gate/collimator/geometry/setZLength 445 mm #440.0 mm 
+/gate/collimator/geometry/setYLength 601 mm #572.0 mm 
+/gate/collimator/placement/setTranslation 59.5 0. 0. mm 
+/gate/collimator/setMaterial Lead
+/gate/collimator/attachPhantomSD
+/gate/collimator/vis/setColor blue 
+/gate/collimator/vis/forceWireframe
+
+#HOLES 
+#--------------------------------------------------------------
+# Diameter : 4.0 mm, Septa: 2.0 mm, Depth: 59.7 mm
+# Nb of holes : 8000 
+#--------------------------------------------------------------
+/gate/collimator/daughters/name hole 
+/gate/collimator/daughters/insert hexagone 
+/gate/hole/geometry/setHeight 59.7 mm 
+/gate/hole/geometry/setRadius 2.0 mm 
+/gate/hole/placement/setRotationAxis 0 1 0 
+/gate/hole/placement/setRotationAngle 90 deg 
+/gate/hole/setMaterial Air
+/gate/hole/vis/forceWireframe
+/gate/hole/vis/setColor white 
+/gate/hole/repeaters/insert cubicArray 
+/gate/hole/cubicArray/setRepeatNumberX 1 
+/gate/hole/cubicArray/setRepeatNumberY 100
+/gate/hole/cubicArray/setRepeatNumberZ 40
+/gate/hole/cubicArray/setRepeatVector 0. 6. 11.1355287 mm #10.3923 mm 
+/gate/hole/repeaters/insert linear 
+/gate/hole/linear/setRepeatNumber 2 
+/gate/hole/linear/setRepeatVector 0. 3. 5.56776436 mm #5.19615 mm 
+
+##CRYSTAL
+##--------------------------------------------------------------
+## Thickness : 15.8 mm, Width : 445.0 mm, Length: 591.0 mm 
+##--------------------------------------------------------------
+#/gate/shielding/daughters/name crystal 
+#/gate/shielding/daughters/insert box 
+#/gate/crystal/geometry/setXLength 15.8 mm 
+#/gate/crystal/geometry/setZLength 445.0 mm 
+#/gate/crystal/geometry/setYLength 591.0 mm 
+#/gate/crystal/placement/setTranslation 21.75 0. 0. mm 
+#/gate/crystal/setMaterial NaI
+#/gate/crystal/attachCrystalSD 
+#/gate/crystal/vis/forceWireframe 
+#/gate/crystal/vis/setColor yellow 
+#/gate/systems/SPECThead/crystal/attach crystal 
+
+#CRYSTAL
+#--------------------------------------------------------------
+# Thickness : 9.5 mm, Width : 445.0 mm, Length: 591.0 mm 
+#--------------------------------------------------------------
+/gate/shielding/daughters/name crystal 
+/gate/shielding/daughters/insert box 
+/gate/crystal/geometry/setXLength 9.52 mm 
+/gate/crystal/geometry/setZLength 445.0 mm 
+/gate/crystal/geometry/setYLength 591.0 mm 
+/gate/crystal/placement/setTranslation 24.9 0. 0. mm 
+/gate/crystal/setMaterial NaI
+/gate/crystal/vis/forceWireframe 
+/gate/crystal/vis/setColor yellow 
+/gate/systems/SPECThead/crystal/attach crystal 
+
+/gate/crystal/attachCrystalSD 
+
+#BACKCOMPARTMENT
+#--------------------------------------------------------------
+# Thickness : 93.7 mm, Width : 445.0 mm, Length: 591.0 mm 
+#--------------------------------------------------------------
+/gate/shielding/daughters/name backcompartment 
+/gate/shielding/daughters/insert box 
+/gate/backcompartment/geometry/setXLength 93.7 mm 
+/gate/backcompartment/geometry/setYLength 445.0 mm 
+/gate/backcompartment/geometry/setZLength 591.0 mm 
+/gate/backcompartment/placement/setTranslation -26.7 0. 0. mm 
+/gate/backcompartment/setMaterial Pyrex # Pyrex66 
+/gate/backcompartment/vis/forceWireframe 
+/gate/backcompartment/vis/setColor green
+/gate/backcompartment/attachPhantomSD
+
+#/gate/application/setTimeSlice      65. s
+#/gate/application/setTimeStart      0.  s
+#/gate/application/setTimeStop       4160. s

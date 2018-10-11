@@ -1,0 +1,22 @@
+# Adder
+#---------------------------------------
+/gate/digitizer/Singles/insert adder
+/gate/digitizer/Singles/insert readout
+/gate/digitizer/Singles/readout/setDepth 2
+# Spatial Blurring
+#---------------------------------------
+#/gate/digitizer/Singles/insert spblurring
+#/gate/digitizer/Singles/spblurring/setSpresolution 0.30000 cm
+
+# Energy Blurring
+#---------------------------------------
+/gate/digitizer/Singles/insert blurring
+/gate/digitizer/Singles/blurring/setLaw linear
+/gate/digitizer/Singles/blurring/linear/setResolution 0.096500
+/gate/digitizer/Singles/blurring/linear/setEnergyOfReference 364.000000 keV
+/gate/digitizer/Singles/blurring/linear/setSlope 0.010000 1/MeV
+
+
+
+
+

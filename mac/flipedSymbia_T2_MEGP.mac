@@ -1,0 +1,154 @@
+######################################################################
+###########    SYMBIA T2 MELP Collimator  ##############
+###################################################################### 
+
+#SCANNER HEAD 
+#--------------------------------------------------------------
+# Thickness : 180.0 mm, Width : 524.4 mm, Length: 670.4 mm 
+#--------------------------------------------------------------
+/gate/world/daughters/name    SPECThead 
+/gate/world/daughters/insert    box 
+/gate/SPECThead/geometry/setXLength   180.0 mm 
+/gate/SPECThead/geometry/setZLength   524.4 mm 
+/gate/SPECThead/geometry/setYLength   670.4 mm 
+/gate/SPECThead/placement/setTranslation  -33. 0. 0. cm 
+/gate/SPECThead/setMaterial    Air 
+/gate/SPECThead/attachPhantomSD 
+/gate/SPECThead/vis/forceWireframe 
+/gate/SPECThead/vis/setVisible 1
+/gate/SPECThead/vis/setColor    grey
+/gate/SPECThead/repeaters/insert ring
+/gate/SPECThead/ring/setRepeatNumber 2
+
+/gate/SPECThead/moves/insert orbiting
+/gate/SPECThead/orbiting/setSpeed 180. deg/s
+/gate/SPECThead/orbiting/setPoint1 0. 0. 0. cm
+/gate/SPECThead/orbiting/setPoint2 0. 0. 1. cm
+
+#SHIELDING
+#--------------------------------------------------------------
+# Thickness : 159.64 mm, Width : 470.4 mm, Length: 616.4 mm 
+#--------------------------------------------------------------
+/gate/SPECThead/daughters/name    shielding 
+/gate/SPECThead/daughters/insert   box 
+/gate/shielding/geometry/setXLength   159.64 mm 
+/gate/shielding/geometry/setZLength   470.4 mm 
+/gate/shielding/geometry/setYLength   616.4 mm 
+/gate/shielding/placement/setTranslation  13.5 0. 0. mm #10.18 0. 0. mm #
+/gate/shielding/setMaterial    Lead   #LeadSb
+/gate/shielding/attachPhantomSD 
+/gate/shielding/vis/forceSolid 
+/gate/shielding/vis/forceWireframe
+/gate/shielding/vis/setColor    red
+/gate/shielding/vis/setVisible 0
+ 
+
+#COLLIMATOR
+#--------------------------------------------------------------
+# Thickness : 40.64 mm, Width : 394.0 mm, Length: 545.0 mm 
+#--------------------------------------------------------------
+/gate/shielding/daughters/name    collimator 
+/gate/shielding/daughters/insert   box 
+/gate/collimator/geometry/setXLength   40.64 mm 
+/gate/collimator/geometry/setZLength   394. mm #394.0 mm 
+/gate/collimator/geometry/setYLength   551. mm #545.0 mm 
+/gate/collimator/placement/setTranslation  59.5 0. 0. mm 
+/gate/collimator/setMaterial    Lead  #LeadSb
+/gate/collimator/attachPhantomSD 
+/gate/collimator/vis/setColor    blue 
+/gate/collimator/vis/forceWireframe 
+/gate/collimator/vis/setVisible 0
+
+#HOLES 
+#--------------------------------------------------------------
+# Diameter : 2.94 mm, Septa: 1.14 mm, Depth: 40.64 mm
+# Nb of holes : 14000
+#--------------------------------------------------------------
+/gate/collimator/daughters/name    hole 
+/gate/collimator/daughters/insert   hexagone 
+/gate/hole/geometry/setHeight    40.64 mm 
+/gate/hole/geometry/setRadius    1.47 mm 
+/gate/hole/placement/setRotationAxis   0 1 0 
+/gate/hole/placement/setRotationAngle  90 deg 
+/gate/hole/setMaterial     Air
+/gate/hole/vis/forceWireframe
+/gate/hole/vis/setColor     white 
+/gate/hole/vis/setVisible 0
+/gate/hole/repeaters/insert    cubicArray 
+/gate/hole/cubicArray/setRepeatNumberX 1 
+/gate/hole/cubicArray/setRepeatNumberY  134  #  96 
+/gate/hole/cubicArray/setRepeatNumberZ  52   ##73 #77 
+/gate/hole/cubicArray/setRepeatVector  0. 4.08 7.5261 mm #7.06677 mm 
+/gate/hole/repeaters/insert    linear 
+/gate/hole/linear/setRepeatNumber   2 
+/gate/hole/linear/setRepeatVector   0. 2.04 3.7630 mm #3.533385 mm 
+/gate/hole/vis/setVisible 0
+
+#CRYSTAL
+#--------------------------------------------------------------
+# Thickness : 15.8 mm, Width : 445.0 mm, Length: 591.0 mm 
+#--------------------------------------------------------------
+/gate/shielding/daughters/name    crystal 
+/gate/shielding/daughters/insert   box 
+/gate/crystal/geometry/setXLength   15.8 mm 
+/gate/crystal/geometry/setZLength   445.0 mm 
+/gate/crystal/geometry/setYLength   591.0 mm 
+/gate/crystal/placement/setTranslation  31.28 0. 0. mm 
+/gate/crystal/setMaterial     NaI
+/gate/crystal/attachCrystalSD 
+/gate/crystal/vis/forceWireframe 
+/gate/crystal/vis/setColor yellow 
+/gate/crystal/vis/setVisible 0
+/gate/systems/SPECThead/crystal/attach   crystal 
+
+#BACKCOMPARTMENT
+#--------------------------------------------------------------
+# Thickness : 96.85 mm, Width : 445.0 mm, Length: 591.0 mm 
+#--------------------------------------------------------------
+/gate/shielding/daughters/name    backcompartment 
+/gate/shielding/daughters/insert   box 
+/gate/backcompartment/geometry/setXLength  96.85 mm 
+/gate/backcompartment/geometry/setZLength  445.0 mm 
+/gate/backcompartment/geometry/setYLength  591.0 mm 
+/gate/backcompartment/placement/setTranslation -25.045 0. 0. mm 
+/gate/backcompartment/setMaterial Glass #Pyrex66 
+/gate/backcompartment/vis/forceWireframe 
+/gate/backcompartment/vis/setColor green 
+/gate/backcompartment/vis/setVisible 0
+
+#=====================================================
+# S E N S I T I V E   D E T E C T O R S
+#=====================================================
+
+#############################################################################
+# GATE provides two sensitive detectors, which have two different functions #
+# Using them properly is very important for getting accurate results        #
+#############################################################################
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+# Crystal SD 												    *
+#													    *	
+# The crystal SD makes it possible to record hits in a sensitive volume (e.g.,. in a scintillation crystal) *
+# It must be attached to any volume for which hit-data must be obtained					    *
+# For recording hits in the NaI volume only, the name of which is crystal, this volume is attached 	    *
+# to the crystal SD      										    *
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+/gate/crystal/attachCrystalSD
+
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+# Phantom SD 												    *
+#													    *
+# The phantom SD makes it possible to record Compton events in the volumes within the field of view         *
+# This can provide information for result analysis to discriminate between 				    *
+# scattered and unscattered photons 									    *
+# It must be attached to each and every volume for whom Compton interactions have to be recorded 	    *
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+/gate/backcompartment/attachPhantomSD
+/gate/shielding/attachPhantomSD
+/gate/SPECThead/attachPhantomSD
+/gate/collimator/attachPhantomSD
+
+
+

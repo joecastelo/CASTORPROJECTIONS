@@ -1,0 +1,36 @@
+/gate/world/daughters/name pcil
+ /gate/world/daughters/insert cylinder
+ /gate/pcil/setMaterial PMMA
+ /gate/pcil/geometry/setRmax 11.12 cm
+  /gate/pcil/geometry/setRmin 10.800001 cm
+ /gate/pcil/geometry/setHeight 18.6 cm
+ /gate/pcil/placement/setTranslation 0. 0. 0. cm
+/gate/pcil/daughters/name mcil
+ /gate/pcil/daughters/insert cylinder
+ /gate/mcil/setMaterial Water
+ /gate/mcil/geometry/setRmax 10.80000 cm
+  /gate/mcil/geometry/setRmin 0. cm
+ /gate/mcil/geometry/setHeight 18.6 cm
+ /gate/mcil/placement/setTranslation 0. 0. 0. cm
+  /gate/mcil/daughters/name psy
+ /gate/mcil/daughters/insert cylinder
+ /gate/psy/setMaterial PP
+ /gate/psy/geometry/setRmax 0.7000 cm
+  /gate/psy/geometry/setRmin 0.600001 cm
+ /gate/psy/geometry/setHeight 11.200000 cm
+ /gate/psy/placement/setTranslation 7.31 4.568 -2.400001 cm
+ /gate/psy/daughters/name dsy
+ /gate/psy/daughters/insert cylinder
+ /gate/dsy/setMaterial Water
+ /gate/dsy/geometry/setRmax 0.60000 cm
+  /gate/dsy/geometry/setRmin 0. cm
+ /gate/dsy/geometry/setHeight 11. cm
+ /gate/dsy/placement/setTranslation 0. 0. 0. cm
+ /gate/mcil/daughters/name metal
+ /gate/mcil/daughters/insert cylinder
+  /gate/metal/setMaterial SS304
+ /gate/metal/geometry/setRmax 0.30000 cm
+/gate/metal/geometry/setHeight 1.3 cm
+  /gate/metal/geometry/setRmin 0. cm
+ /gate/metal/placement/setTranslation 7.31 4.568 -8.650000001 cm
+/gate/dsy/attachPhantomSD

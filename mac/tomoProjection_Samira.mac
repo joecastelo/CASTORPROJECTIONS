@@ -1,0 +1,13 @@
+###### 364, 300, 400
+/gate/output/projection/enable
+/gate/output/projection/setInputDataName 364keV
+/gate/output/projection/addInputDataName 300keV
+/gate/output/projection/addInputDataName 400keV
+#/gate/output/projection/setFileName ../output/{testNumber}
+/gate/output/projection/setFileName ../output/elevencm{i}
+/gate/output/projection/pixelSizeX 9.59 mm 
+/gate/output/projection/pixelSizeY 9.59 mm
+/gate/output/projection/pixelNumberX 64
+/gate/output/projection/pixelNumberY 64
+/gate/output/projection/projectionPlane YZ
+

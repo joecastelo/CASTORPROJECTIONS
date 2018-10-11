@@ -1,0 +1,12 @@
+
+#=====================================
+#    Electromagnetic  processes
+#=====================================
+
+/gate/physics/addPhysicsList emstandard_opt3
+/gate/physics/processList Enabled gamma
+/gate/physics/processList Enabled e-
+/gate/physics/processList Initialized
+
+#/gate/physics/processes/PhotoElectric/setAugerElectron false
+#/gate/physics/displayCuts

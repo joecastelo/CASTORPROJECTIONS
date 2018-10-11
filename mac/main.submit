@@ -1,0 +1,25 @@
+#! /bin/sh
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main1.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main2.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main3.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main4.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main5.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main6.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main7.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main8.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main9.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main10.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main11.mac &
+sleep 10s
+/home/programs/gate/gate_v8.1/gate_v8.1-install/bin/Gate /home/programs/gate/gate_v8.1/.Gate/main/main12.mac &
+sleep 10s

@@ -1,0 +1,7 @@
+gate/world/daughters/name sp
+gate/world/daughters/insert Sphere
+gate/sp/geometry/setRmax 12. cm
+gate/sp/geometry/setRmin 0. cm
+gate/sp/setMaterial Water
+gate/sp/vis/setColor cyan
+gate/sp/vis/forceSolid

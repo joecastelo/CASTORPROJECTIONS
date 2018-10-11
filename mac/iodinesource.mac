@@ -1,0 +1,18 @@
+
+/gate/source/addSource iodine 
+
+/gate/source/iodine/gps/centre 0. 0. 0. cm 
+/gate/source/iodine/gps/type Volume
+/gate/source/iodine/gps/shape Cylinder
+/gate/source/iodine/gps/radius 5.99999 mm
+/gate/source/iodine/gps/halfz 7.5 cm 
+/gate/source/iodine/setActivity {act} Bq
+/gate/source/iodine/gps/particle ion 
+/gate/source/iodine/gps/ion 53 131 0 0 
+/gate/source/iodine/gps/angtype iso
+/gate/source/iodine/gps/monoenergy 0. keV 
+/gate/source/iodine/setForcedUnstableFlag true
+# WARNING - DEBUG - New command line to debug the use of ion particle type
+/gate/source/iodine/attachTo dsy
+/gate/source/iodine/useDefaultHalfLife  
+/gate/source/list
